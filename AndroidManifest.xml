@@ -87,7 +87,12 @@
                 android:excludeFromRecents="true"
                 android:taskAffinity=""
                 android:theme="@style/ScreensaverActivityTheme"
-                android:configChanges="orientation|screenSize|keyboardHidden|keyboard" />
+                android:configChanges="orientation|screenSize|keyboardHidden|keyboard" 
+                >
+	    <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
 
         <receiver android:name=".alarms.AlarmStateManager"
                   android:exported="false">
